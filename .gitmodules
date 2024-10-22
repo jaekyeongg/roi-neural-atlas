@@ -1,0 +1,9 @@
+[submodule "thirdparty/RAFT"]
+	path = thirdparty/RAFT
+	url = https://github.com/princeton-vl/RAFT.git
+[submodule "thirdparty/dino"]
+	path = thirdparty/dino
+	url = https://github.com/facebookresearch/dino.git
+[submodule "thirdparty/VitMatte"]
+	path = thirdparty/VitMatte
+	url = https://github.com/hustvl/ViTMatte.git
