@@ -34,8 +34,6 @@ The video frames follows the format of [DAVIS](https://davischallenge.org/) data
 
 ### Preprocess optical flow
 
-Set the dataset name, reference frame, and the ROI of the area you want to edit in the config file.
-
 We extract the optical flow using [RAFT](https://arxiv.org/abs/2003.12039). The models can be downloaded by the following command:
 
 ```
@@ -44,13 +42,15 @@ cd thirdparty/RAFT/
 cd ../..
 ```
 
-To create optical flow for the video and make initial masks , run:
+Set the dataset name, reference frame, and the ROI of the area you want to edit in the config file.
+
+To create optical flow for the video and make initial mask, run:
 
 ```
 python preprocess_main.py --config config/config.py
 ```
 
-The script will automatically generate the corresponding optical flow and initial masks in the right directory.
+The script will automatically generate the corresponding optical flow and initial mask in the right directory.
 
 
 ## Training
@@ -67,7 +67,7 @@ The config file and checkpoint file will be stored to the assigned result folder
 
 Download the model from [VittMatte](https://drive.google.com/file/d/12VKhSwE_miF9lWQQCgK7mv83rJIls3Xe/view) and place it in the `thirdparty/Vitmatte/models` directory.
 
-To matte the masks, run : 
+To matte the mask, run : 
 
 ```
 python postprocess.py --config config/config.py
@@ -78,7 +78,8 @@ The matted mask will be stored to the refined_mask folder.
 
 ## Editing
 
-You can edit the `tex0.png` to edit the video. Please set the checkpoint path and the edited texture file in the config file.
+You can edit the `tex0.png` to edit the video and set the checkpoint path, the edited texture file in the config file.
+
 After that, run: 
 
 ```
