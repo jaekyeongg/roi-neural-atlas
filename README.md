@@ -42,7 +42,7 @@ cd thirdparty/RAFT/
 cd ../..
 ```
 
-Set the dataset name, reference frame, and the ROI of the area you want to edit in the config file.
+Set the dataset name, reference frame, and the ROI of the area you want to edit in the config file.  
 To create optical flow for the video and make initial mask, run:
 
 ```
@@ -64,7 +64,7 @@ The config file and checkpoint file will be stored to the assigned result folder
 
 ## Postprocess
 
-Download the model from [VittMatte](https://drive.google.com/file/d/12VKhSwE_miF9lWQQCgK7mv83rJIls3Xe/view) and place it in the `thirdparty/Vitmatte/models` directory.
+Download the model from [VittMatte](https://drive.google.com/file/d/12VKhSwE_miF9lWQQCgK7mv83rJIls3Xe/view) and place it in the `thirdparty/Vitmatte/models` directory.  
 To matte the mask, run : 
 
 ```
@@ -76,7 +76,7 @@ The matted mask will be stored to the refined_mask folder.
 
 ## Editing
 
-You can edit the `tex0.png` to edit the video and set the checkpoint path, the edited texture file in the config file.
+You can edit the `tex0.png` to edit the video and set the checkpoint path, the edited texture file in the config file.  
 After that, run: 
 
 ```
