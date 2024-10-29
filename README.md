@@ -4,7 +4,7 @@
 
 ## Installation
 
-Our code is compatible and validate with Python 3.10 PyTorch 1.13.1, and CUDA 11.7.
+Our code is compatible and validate with Python 3.10m PyTorch 1.13.1, and CUDA 11.7.
 
 ```
 conda create -n rna  python=3.10
@@ -28,13 +28,13 @@ data
 
 ## Data preparations
 
-### Download video frames and set ROI on the reference frame.
+### Video frames
 
 The video frames follows the format of [DAVIS](https://davischallenge.org/) dataset. The file type of images should be all either in png or jpg and named as `00000.jpg`, `00001.jpg`, ...
 
-And set the dataset name, reference frame, and the ROI of the area you want to edit in the config file.
-
 ### Preprocess optical flow
+
+Set the dataset name, reference frame, and the ROI of the area you want to edit in the config file.
 
 We extract the optical flow using [RAFT](https://arxiv.org/abs/2003.12039). The models can be downloaded by the following command:
 
@@ -44,7 +44,7 @@ cd thirdparty/RAFT/
 cd ../..
 ```
 
-To create optical flow and initial mask for the video , run:
+To create optical flow for the video and make initial masks , run:
 
 ```
 python preprocess_main.py --config config/config.py
@@ -63,9 +63,10 @@ python train.py --config config/config.py
 
 The config file and checkpoint file will be stored to the assigned result folder.
 
-## Postproces masks using Matting
+## Postprocess
 
 Download the model from [VittMatte](https://drive.google.com/file/d/12VKhSwE_miF9lWQQCgK7mv83rJIls3Xe/view) and place it in the `thirdparty/Vitmatte/models` directory.
+
 To matte the masks, run : 
 
 ```

@@ -118,6 +118,7 @@ def main(config):
     jif_all = get_tuples(number_of_frames, video_frames)   
 
     
+    print("pretrain mapping network")
     for i, model_F_mapping in enumerate(model_F_mappings):
         if model_F_mapping.pretrain:
             pre_train_mapping(
